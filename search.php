@@ -23,12 +23,12 @@
 	 
  }
   function dualSearch($firstname,$lastname){
-	  $query="select firstname,lastname,middlename from person where firstname='$firstname' and lastname='$lastname'";
+	  $query="select id,firstname,lastname,middlename from person where firstname='$firstname' and lastname='$lastname'";
 	  $connect=mysqli_connect('localhost','root','','census') or die(mysqli_error());
 	  $result=mysqli_query($connect,$query) or die(mysqli_error());
 	  $data='';
 	  while($row=mysqli_fetch_array($result)){
-		  $data=$row['firstname'].','.$row['lastname'].','.$row['middlename'].';'.$data;
+		  $data=$row['firstname'].','.$row['lastname'].','.$row['middlename'].','.$row['id'].';'.$data;
 	  }
 	  die($data);
   }
