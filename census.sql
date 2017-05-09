@@ -25,7 +25,8 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `area`
 --
-
+CREATE DATABASE census;
+use census;
 CREATE TABLE `area` (
   `region` varchar(255) DEFAULT NULL,
   `zone` varchar(255) DEFAULT NULL,

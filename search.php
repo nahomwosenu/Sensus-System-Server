@@ -4,7 +4,7 @@
  if($_SERVER['REQUEST_METHOD']=='POST'){
 	 if(!empty($_POST['term']))
 		 $searchTerm=verify($_POST['term']);
-	 else die('error');
+	 else $searchTerm='';
 	 if(!empty($_POST['firstname']))
 		 $firstname=verify($_POST['firstname']);
 	 else $firstname='';
